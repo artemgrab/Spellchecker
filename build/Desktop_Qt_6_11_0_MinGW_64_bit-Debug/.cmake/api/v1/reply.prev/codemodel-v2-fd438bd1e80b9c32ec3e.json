@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6630c28ed0fd244d8a87.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "spellchecker",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "spellchecker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spellchecker-Debug-6c42ff7faacd7a0c2ed4.json",
+					"name" : "spellchecker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spellchecker_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spellchecker_autogen-Debug-b7a00abbf93e09ce2fbf.json",
+					"name" : "spellchecker_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "spellchecker_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-spellchecker_autogen_timestamp_deps-Debug-b8a0f7131c9dec3ea927.json",
+					"name" : "spellchecker_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Artem/Documents/spellchecker/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Artem/Documents/spellchecker"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

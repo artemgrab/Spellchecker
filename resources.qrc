@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/Upload.png</file>
+        <file>img/Replay.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>887</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SpellChecker</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;
+font-family: Inter;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>106</y>
+      <width>845</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 20px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>37</x>
+       <y>19</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;
+font-size: 18px;
+
+font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Очікування вводу...</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="TextEdit">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>70</y>
+       <width>781</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit {
+    font-size: 16px;
+	color: #black;
+}
+
+
+QScrollBar:vertical {
+    border: none;
+    background: transparent;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #BDBDBD;
+    min-height: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #9E9E9E;
+}
+
+QScrollBar::handle:vertical:pressed {
+    background: #E95CE0; 
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}</string>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Введіть текст</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clearButton">
+     <property name="geometry">
+      <rect>
+       <x>786</x>
+       <y>20</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#clearButton {
+    background-color: transparent; 
+    border-radius: 15px;        
+    color: #888888;              
+    font-size: 18px;
+    border: none;
+}
+QPushButton#clearButton:hover {
+    background-color: #f0f0f0;       
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/img/Replay.png</normaloff>:/img/img/Replay.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>500</width>
+       <height>500</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="charCountLabel">
+     <property name="geometry">
+      <rect>
+       <x>723</x>
+       <y>215</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black; font-size: 13px;</string>
+     </property>
+     <property name="text">
+      <string>0 / 1000</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <zorder>label_2</zorder>
+    <zorder>TextEdit</zorder>
+    <zorder>charCountLabel</zorder>
+    <zorder>clearButton</zorder>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>35</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font-size: 30px;
+font-weight: bold;</string>
+    </property>
+    <property name="text">
+     <string>Spell Checker</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>377</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font-size: 15px;
+
+font-weight: bold;</string>
+    </property>
+    <property name="text">
+     <string>Мова</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>148</x>
+      <y>384</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: white;
+    font-size: 15px;
+    min-width: 150px;
+    color: black;
+    font-weight: bold;
+}
+
+QComboBox::drop-down {
+    border: none; 
+}
+
+QComboBox QAbstractItemView {
+    background-color: white;         
+    border: 1px solid #e0e0e0;       
+    border-radius: 8px;              
+    outline: none;                   
+    padding: 4px;                   
+    selection-background-color: #FF99F8; 
+    selection-color: white;        
+}
+
+
+QComboBox QAbstractItemView::item {
+    height: 25px;      
+    border-radius: 4px;              
+    padding-left: 10px;              
+    color: #333333;   
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #FF99F8;
+    color: white;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Англійська</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Українська</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>378</y>
+      <width>415</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #E95CE0; 
+    color: white;
+    border-radius: 16.5px;
+    padding: 10px 30px; 
+    font-size: 15px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #CD3EC3; 
+}
+QPushButton:pressed {
+    background-color: #AC31A3; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Перевірити текст</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LoadFileButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>380</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#LoadFileButton {
+    background-color: transparent; 
+    border-radius: 15px;        
+    color: #888888;              
+    font-size: 18px;
+    border: none;
+}
+
+QPushButton#LoadFileButton:hover {
+    background-color: #f0f0f0;           
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/img/Upload.png</normaloff>:/img/img/Upload.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helpButton">
+    <property name="geometry">
+     <rect>
+      <x>782</x>
+      <y>50</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#helpButton {
+color: #E95CE0;
+font-size: 15px;
+background-color: transparent; 
+}
+
+QPushButton#helpButton::hover {
+    color: #CD3EC3; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Інструкція</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
